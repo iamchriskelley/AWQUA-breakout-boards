@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -988,6 +988,15 @@ This is the "EZ" version, which has limited top masking for improved ease of ass
 <text x="-0.12" y="-1.63" size="0.3" layer="21" rot="R90">NC 1</text>
 <text x="1.09" y="-1.66" size="0.3" layer="21" rot="R90">NC 2</text>
 </package>
+<package name="TSL245">
+<pad name="OUT" x="-2" y="0" drill="0.8"/>
+<pad name="VDD" x="0" y="0" drill="0.8"/>
+<pad name="GND" x="2" y="0" drill="0.8" rot="R90"/>
+<wire x1="-3.4" y1="1.4" x2="-3.4" y2="-1.2" width="0.127" layer="21"/>
+<wire x1="-3.4" y1="-1.2" x2="3.6" y2="-1.2" width="0.127" layer="21"/>
+<wire x1="-3.4" y1="1.4" x2="3.6" y2="1.4" width="0.127" layer="21"/>
+<wire x1="3.6" y1="1.4" x2="3.6" y2="-1.2" width="0.127" layer="21"/>
+</package>
 </packages>
 <symbols>
 <symbol name="CRYSTAL_OSCILLATOR">
@@ -1503,6 +1512,17 @@ This is the "EZ" version, which has limited top masking for improved ease of ass
 <pin name="NC3" x="2.54" y="-15.24" length="middle" rot="R90"/>
 <pin name="NC4" x="7.62" y="-15.24" length="middle" rot="R90"/>
 <text x="-7.62" y="0" size="1.778" layer="95">TSL238</text>
+</symbol>
+<symbol name="TSL245">
+<wire x1="10.16" y1="-7.62" x2="10.16" y2="2.54" width="0.254" layer="94"/>
+<wire x1="10.16" y1="2.54" x2="-5.08" y2="2.54" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="2.54" x2="-5.08" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-7.62" x2="10.16" y2="-7.62" width="0.254" layer="94"/>
+<pin name="GND" x="7.62" y="-12.7" length="middle" rot="R90"/>
+<pin name="VDD" x="2.54" y="-12.7" length="middle" rot="R90"/>
+<pin name="OUT" x="-2.54" y="-12.7" length="middle" rot="R90"/>
+<text x="-2.54" y="0" size="1.27" layer="95">TSL245</text>
+<wire x1="0" y1="2.54" x2="5.08" y2="2.54" width="0.254" layer="94" curve="-180"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -2349,6 +2369,23 @@ This is the "EZ" version, which has limited top masking for improved ease of ass
 <connect gate="G$1" pin="NC3" pad="NC3"/>
 <connect gate="G$1" pin="NC4" pad="NC4"/>
 <connect gate="G$1" pin="OE" pad="OE"/>
+<connect gate="G$1" pin="OUT" pad="OUT"/>
+<connect gate="G$1" pin="VDD" pad="VDD"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="TSL245">
+<gates>
+<gate name="G$1" symbol="TSL245" x="-2.54" y="5.08"/>
+</gates>
+<devices>
+<device name="" package="TSL245">
+<connects>
+<connect gate="G$1" pin="GND" pad="GND"/>
 <connect gate="G$1" pin="OUT" pad="OUT"/>
 <connect gate="G$1" pin="VDD" pad="VDD"/>
 </connects>

@@ -8,3 +8,6 @@ TSL238 is a high-sensitivity light-to-frequency converter. It is available at [M
 
 ###TSL230RD
 TSL230RD is a high-sensitivity light-to-frequency converter. It is available at [Mouser](http://www.mouser.com/ProductDetail/ams/TSL230RD/?qs=Mty3Fo4ApVjWJHVPSIbomg%3D%3D) and as of this writing costs $3.46/ea (Q10).
+
+###TSL245
+TSL245 is a infrared light-to-frequency converter. It is not stocked at [Mouser](http://www.mouser.com/ProductDetail/Texas-Instruments/TSL245/?qs=sGAEpiMZZMvxO7XFMojgsBU15QTW6Nbx). Should call for quote.
