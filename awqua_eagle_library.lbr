@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -965,6 +965,29 @@ This is the "EZ" version, which has limited top masking for improved ease of ass
 <wire x1="-1.27" y1="-1.27" x2="-3.81" y2="-1.27" width="0.127" layer="21"/>
 <wire x1="1.27" y1="-1.27" x2="-1.27" y2="-1.27" width="0.127" layer="21" curve="-180"/>
 </package>
+<package name="TSL238">
+<wire x1="-0.84" y1="-1.81" x2="4.46" y2="-1.81" width="0.127" layer="21"/>
+<wire x1="4.46" y1="-1.81" x2="4.46" y2="2.19" width="0.127" layer="21"/>
+<wire x1="4.46" y1="2.19" x2="-0.84" y2="2.19" width="0.127" layer="21"/>
+<wire x1="-0.84" y1="2.19" x2="-0.84" y2="-1.81" width="0.127" layer="21"/>
+<smd name="OUT" x="-0.31" y="3.19" dx="1.27" dy="0.635" layer="1" rot="R90"/>
+<smd name="VDD" x="0.96" y="3.19" dx="1.27" dy="0.635" layer="1" rot="R90"/>
+<smd name="GND" x="2.23" y="3.19" dx="1.27" dy="0.635" layer="1" rot="R90"/>
+<smd name="OE" x="3.5" y="3.19" dx="1.27" dy="0.635" layer="1" rot="R90"/>
+<smd name="NC4" x="3.5" y="-2.81" dx="1.27" dy="0.635" layer="1" rot="R90"/>
+<smd name="NC3" x="2.23" y="-2.81" dx="1.27" dy="0.635" layer="1" rot="R90"/>
+<smd name="NC2" x="0.96" y="-2.81" dx="1.27" dy="0.635" layer="1" rot="R90"/>
+<smd name="NC1" x="-0.31" y="-2.81" dx="1.27" dy="0.635" layer="1" rot="R90"/>
+<text x="0.02" y="0.04" size="0.5" layer="21">TSL238</text>
+<text x="3.78" y="1.53" size="0.3" layer="21" rot="R90">OE</text>
+<text x="2.4" y="1.19" size="0.3" layer="21" rot="R90">GND</text>
+<text x="2.51" y="-1.61" size="0.3" layer="21" rot="R90">NC 3</text>
+<text x="3.69" y="-1.67" size="0.3" layer="21" rot="R90">NC 4</text>
+<text x="1.1" y="1.24" size="0.3" layer="21" rot="R90">VDD</text>
+<text x="-0.1" y="1.15" size="0.3" layer="21" rot="R90">OUT</text>
+<text x="-0.12" y="-1.63" size="0.3" layer="21" rot="R90">NC 1</text>
+<text x="1.09" y="-1.66" size="0.3" layer="21" rot="R90">NC 2</text>
+</package>
 </packages>
 <symbols>
 <symbol name="CRYSTAL_OSCILLATOR">
@@ -1465,6 +1488,21 @@ This is the "EZ" version, which has limited top masking for improved ease of ass
 <wire x1="7.62" y1="-2.54" x2="7.62" y2="-10.16" width="0.254" layer="94"/>
 <wire x1="7.62" y1="-10.16" x2="-2.54" y2="-10.16" width="0.254" layer="94"/>
 <wire x1="-2.54" y1="-10.16" x2="-2.54" y2="-2.54" width="0.254" layer="94"/>
+</symbol>
+<symbol name="TSL238">
+<wire x1="-10.16" y1="10.16" x2="-10.16" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="-10.16" x2="12.7" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="12.7" y1="-10.16" x2="12.7" y2="10.16" width="0.254" layer="94"/>
+<wire x1="12.7" y1="10.16" x2="-10.16" y2="10.16" width="0.254" layer="94"/>
+<pin name="OUT" x="-7.62" y="15.24" length="middle" rot="R270"/>
+<pin name="VDD" x="-2.54" y="15.24" length="middle" rot="R270"/>
+<pin name="GND" x="2.54" y="15.24" length="middle" rot="R270"/>
+<pin name="OE" x="7.62" y="15.24" length="middle" rot="R270"/>
+<pin name="NC1" x="-7.62" y="-15.24" length="middle" rot="R90"/>
+<pin name="NC2" x="-2.54" y="-15.24" length="middle" rot="R90"/>
+<pin name="NC3" x="2.54" y="-15.24" length="middle" rot="R90"/>
+<pin name="NC4" x="7.62" y="-15.24" length="middle" rot="R90"/>
+<text x="-7.62" y="0" size="1.778" layer="95">TSL238</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -2289,6 +2327,28 @@ This is the "EZ" version, which has limited top masking for improved ease of ass
 <device name="" package="TSL267">
 <connects>
 <connect gate="G$1" pin="GND" pad="GND"/>
+<connect gate="G$1" pin="OUT" pad="OUT"/>
+<connect gate="G$1" pin="VDD" pad="VDD"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="TSL238">
+<gates>
+<gate name="G$1" symbol="TSL238" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="TSL238">
+<connects>
+<connect gate="G$1" pin="GND" pad="GND"/>
+<connect gate="G$1" pin="NC1" pad="NC1"/>
+<connect gate="G$1" pin="NC2" pad="NC2"/>
+<connect gate="G$1" pin="NC3" pad="NC3"/>
+<connect gate="G$1" pin="NC4" pad="NC4"/>
+<connect gate="G$1" pin="OE" pad="OE"/>
 <connect gate="G$1" pin="OUT" pad="OUT"/>
 <connect gate="G$1" pin="VDD" pad="VDD"/>
 </connects>
