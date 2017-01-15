@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.3.0">
+<eagle version="7.7.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -997,6 +997,35 @@ This is the "EZ" version, which has limited top masking for improved ease of ass
 <wire x1="-3.4" y1="1.4" x2="3.6" y2="1.4" width="0.127" layer="21"/>
 <wire x1="3.6" y1="1.4" x2="3.6" y2="-1.2" width="0.127" layer="21"/>
 </package>
+<package name="ADA4528">
+<wire x1="0" y1="0" x2="0" y2="3" width="0.127" layer="21"/>
+<wire x1="0" y1="3" x2="3" y2="3" width="0.127" layer="21"/>
+<wire x1="3" y1="3" x2="3" y2="0" width="0.127" layer="21"/>
+<wire x1="3" y1="0" x2="0" y2="0" width="0.127" layer="21"/>
+<smd name="P$1" x="-0.6" y="2.45" dx="1.05" dy="0.33" layer="1"/>
+<smd name="P$2" x="-0.6" y="1.8" dx="1.05" dy="0.33" layer="1"/>
+<smd name="P$3" x="-0.6" y="1.15" dx="1.05" dy="0.33" layer="1"/>
+<smd name="P$4" x="-0.6" y="0.5" dx="1.05" dy="0.33" layer="1"/>
+<smd name="P$5" x="3.6" y="2.45" dx="1.05" dy="0.33" layer="1"/>
+<smd name="P$6" x="3.6" y="1.8" dx="1.05" dy="0.33" layer="1"/>
+<smd name="P$7" x="3.6" y="1.15" dx="1.05" dy="0.33" layer="1"/>
+<smd name="P$8" x="3.6" y="0.5" dx="1.05" dy="0.33" layer="1"/>
+</package>
+<package name="SHT31-D">
+<wire x1="0" y1="0" x2="0" y2="2.5" width="0.127" layer="21"/>
+<wire x1="0" y1="2.5" x2="2.5" y2="2.5" width="0.127" layer="21"/>
+<wire x1="2.5" y1="2.5" x2="2.5" y2="0" width="0.127" layer="21"/>
+<wire x1="2.5" y1="0" x2="0" y2="0" width="0.127" layer="21"/>
+<smd name="P$1" x="0.025" y="2" dx="0.65" dy="0.25" layer="1"/>
+<smd name="P$2" x="0.025" y="1.5" dx="0.65" dy="0.25" layer="1"/>
+<smd name="P$3" x="0.025" y="1" dx="0.65" dy="0.25" layer="1"/>
+<smd name="P$4" x="0.025" y="0.5" dx="0.65" dy="0.25" layer="1"/>
+<smd name="P$5" x="2.475" y="0.5" dx="0.65" dy="0.25" layer="1" rot="R180"/>
+<smd name="P$6" x="2.475" y="1" dx="0.65" dy="0.25" layer="1" rot="R180"/>
+<smd name="P$7" x="2.475" y="1.5" dx="0.65" dy="0.25" layer="1" rot="R180"/>
+<smd name="P$8" x="2.475" y="2" dx="0.65" dy="0.25" layer="1" rot="R180"/>
+<smd name="P$9" x="1.25" y="1.25" dx="1.5" dy="0.8" layer="1" rot="R90"/>
+</package>
 </packages>
 <symbols>
 <symbol name="CRYSTAL_OSCILLATOR">
@@ -1523,6 +1552,35 @@ This is the "EZ" version, which has limited top masking for improved ease of ass
 <pin name="OUT" x="-2.54" y="-12.7" length="middle" rot="R90"/>
 <text x="-2.54" y="0" size="1.27" layer="95">TSL245</text>
 <wire x1="0" y1="2.54" x2="5.08" y2="2.54" width="0.254" layer="94" curve="-180"/>
+</symbol>
+<symbol name="ADA4528">
+<wire x1="0" y1="0" x2="20.32" y2="0" width="0.254" layer="94"/>
+<wire x1="20.32" y1="0" x2="20.32" y2="12.7" width="0.254" layer="94"/>
+<wire x1="20.32" y1="12.7" x2="0" y2="12.7" width="0.254" layer="94"/>
+<wire x1="0" y1="12.7" x2="0" y2="0" width="0.254" layer="94"/>
+<pin name="OUT_A" x="-5.08" y="10.16" length="middle"/>
+<pin name="-IN_A" x="-5.08" y="7.62" length="middle"/>
+<pin name="+IN_A" x="-5.08" y="5.08" length="middle"/>
+<pin name="GND" x="-5.08" y="2.54" length="middle"/>
+<pin name="+IN_B" x="25.4" y="2.54" length="middle" rot="R180"/>
+<pin name="-IN_B" x="25.4" y="5.08" length="middle" rot="R180"/>
+<pin name="OUT_B" x="25.4" y="7.62" length="middle" rot="R180"/>
+<pin name="VCC" x="25.4" y="10.16" length="middle" rot="R180"/>
+</symbol>
+<symbol name="SHT31-D">
+<wire x1="0" y1="0" x2="20.32" y2="0" width="0.254" layer="94"/>
+<wire x1="20.32" y1="0" x2="20.32" y2="25.4" width="0.254" layer="94"/>
+<wire x1="20.32" y1="25.4" x2="0" y2="25.4" width="0.254" layer="94"/>
+<wire x1="0" y1="25.4" x2="0" y2="0" width="0.254" layer="94"/>
+<pin name="SDA" x="-5.08" y="20.32" length="middle"/>
+<pin name="ADDR" x="-5.08" y="15.24" length="middle"/>
+<pin name="ALERT" x="-5.08" y="10.16" length="middle"/>
+<pin name="SCL" x="-5.08" y="5.08" length="middle"/>
+<pin name="VCC" x="25.4" y="5.08" length="middle" rot="R180"/>
+<pin name="RESET" x="25.4" y="10.16" length="middle" rot="R180"/>
+<pin name="R" x="25.4" y="15.24" length="middle" rot="R180"/>
+<pin name="GND" x="25.4" y="20.32" length="middle" rot="R180"/>
+<pin name="GND_PAD" x="10.16" y="20.32" length="middle" rot="R90"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -2066,7 +2124,7 @@ This is the "EZ" version, which has limited top masking for improved ease of ass
 </device>
 </devices>
 </deviceset>
-<deviceset name="AL5809">
+<deviceset name="AL5809" prefix="AL" uservalue="yes">
 <gates>
 <gate name="G$1" symbol="AL5809" x="0" y="0"/>
 </gates>
@@ -2078,6 +2136,7 @@ This is the "EZ" version, which has limited top masking for improved ease of ass
 </connects>
 <technologies>
 <technology name=""/>
+<technology name="HELLO"/>
 </technologies>
 </device>
 </devices>
@@ -2388,6 +2447,51 @@ This is the "EZ" version, which has limited top masking for improved ease of ass
 <connect gate="G$1" pin="GND" pad="GND"/>
 <connect gate="G$1" pin="OUT" pad="OUT"/>
 <connect gate="G$1" pin="VDD" pad="VDD"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="ADA4528">
+<gates>
+<gate name="G$1" symbol="ADA4528" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="ADA4528">
+<connects>
+<connect gate="G$1" pin="+IN_A" pad="P$3"/>
+<connect gate="G$1" pin="+IN_B" pad="P$5"/>
+<connect gate="G$1" pin="-IN_A" pad="P$2"/>
+<connect gate="G$1" pin="-IN_B" pad="P$6"/>
+<connect gate="G$1" pin="GND" pad="P$4"/>
+<connect gate="G$1" pin="OUT_A" pad="P$1"/>
+<connect gate="G$1" pin="OUT_B" pad="P$7"/>
+<connect gate="G$1" pin="VCC" pad="P$8"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SHT31-D">
+<gates>
+<gate name="G$1" symbol="SHT31-D" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SHT31-D">
+<connects>
+<connect gate="G$1" pin="ADDR" pad="P$2"/>
+<connect gate="G$1" pin="ALERT" pad="P$3"/>
+<connect gate="G$1" pin="GND" pad="P$8"/>
+<connect gate="G$1" pin="GND_PAD" pad="P$9"/>
+<connect gate="G$1" pin="R" pad="P$7"/>
+<connect gate="G$1" pin="RESET" pad="P$6"/>
+<connect gate="G$1" pin="SCL" pad="P$4"/>
+<connect gate="G$1" pin="SDA" pad="P$1"/>
+<connect gate="G$1" pin="VCC" pad="P$5"/>
 </connects>
 <technologies>
 <technology name=""/>
