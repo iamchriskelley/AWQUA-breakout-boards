@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.7.0">
+<eagle version="7.3.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -1026,6 +1026,22 @@ This is the "EZ" version, which has limited top masking for improved ease of ass
 <smd name="P$8" x="2.475" y="2" dx="0.65" dy="0.25" layer="1" rot="R180"/>
 <smd name="P$9" x="1.25" y="1.25" dx="1.5" dy="0.8" layer="1" rot="R90"/>
 </package>
+<package name="DIO6605B">
+<wire x1="0" y1="0" x2="3" y2="0" width="0.127" layer="21"/>
+<wire x1="3" y1="0" x2="3" y2="2" width="0.127" layer="21"/>
+<wire x1="3" y1="2" x2="0" y2="2" width="0.127" layer="21"/>
+<wire x1="0" y1="2" x2="0" y2="0" width="0.127" layer="21"/>
+<smd name="DPAD" x="1.5" y="1" dx="1.5" dy="1.4" layer="1"/>
+<smd name="P$4" x="0.2" y="0.25" dx="0.4" dy="0.25" layer="1"/>
+<smd name="P$3" x="0.2" y="0.75" dx="0.4" dy="0.25" layer="1"/>
+<smd name="P$2" x="0.2" y="1.25" dx="0.4" dy="0.25" layer="1"/>
+<smd name="P$1" x="0.2" y="1.75" dx="0.4" dy="0.25" layer="1"/>
+<smd name="P$5" x="2.8" y="0.25" dx="0.4" dy="0.25" layer="1"/>
+<smd name="P$6" x="2.8" y="0.75" dx="0.4" dy="0.25" layer="1"/>
+<smd name="P$7" x="2.8" y="1.25" dx="0.4" dy="0.25" layer="1"/>
+<smd name="P$8" x="2.8" y="1.75" dx="0.4" dy="0.25" layer="1"/>
+<circle x="0.6" y="1.8" radius="0.08" width="0.127" layer="21"/>
+</package>
 </packages>
 <symbols>
 <symbol name="CRYSTAL_OSCILLATOR">
@@ -1581,6 +1597,19 @@ This is the "EZ" version, which has limited top masking for improved ease of ass
 <pin name="R" x="25.4" y="15.24" length="middle" rot="R180"/>
 <pin name="GND" x="25.4" y="20.32" length="middle" rot="R180"/>
 <pin name="GND_PAD" x="10.16" y="20.32" length="middle" rot="R90"/>
+</symbol>
+<symbol name="DIO6605B">
+<wire x1="0" y1="0" x2="25.4" y2="0" width="0.254" layer="94"/>
+<wire x1="25.4" y1="0" x2="25.4" y2="27.94" width="0.254" layer="94"/>
+<wire x1="25.4" y1="27.94" x2="0" y2="27.94" width="0.254" layer="94"/>
+<wire x1="0" y1="27.94" x2="0" y2="0" width="0.254" layer="94"/>
+<pin name="EN" x="-5.08" y="22.86" length="middle"/>
+<pin name="AGND" x="-5.08" y="17.78" length="middle"/>
+<pin name="PGND" x="-5.08" y="12.7" length="middle"/>
+<pin name="SW" x="-5.08" y="7.62" length="middle"/>
+<pin name="VIN" x="30.48" y="7.62" length="middle" rot="R180"/>
+<pin name="VOUT" x="30.48" y="17.78" length="middle" rot="R180"/>
+<pin name="DGND" x="12.7" y="10.16" visible="pad" length="middle" rot="R90"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -2492,6 +2521,27 @@ This is the "EZ" version, which has limited top masking for improved ease of ass
 <connect gate="G$1" pin="SCL" pad="P$4"/>
 <connect gate="G$1" pin="SDA" pad="P$1"/>
 <connect gate="G$1" pin="VCC" pad="P$5"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="DIO6605B">
+<gates>
+<gate name="G$1" symbol="DIO6605B" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="DIO6605B">
+<connects>
+<connect gate="G$1" pin="AGND" pad="P$2"/>
+<connect gate="G$1" pin="DGND" pad="DPAD"/>
+<connect gate="G$1" pin="EN" pad="P$1"/>
+<connect gate="G$1" pin="PGND" pad="P$3"/>
+<connect gate="G$1" pin="SW" pad="P$4"/>
+<connect gate="G$1" pin="VIN" pad="P$5"/>
+<connect gate="G$1" pin="VOUT" pad="P$7"/>
 </connects>
 <technologies>
 <technology name=""/>
