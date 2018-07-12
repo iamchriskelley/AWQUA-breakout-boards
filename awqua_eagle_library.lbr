@@ -1042,6 +1042,18 @@ This is the "EZ" version, which has limited top masking for improved ease of ass
 <smd name="P$8" x="2.8" y="1.75" dx="0.4" dy="0.25" layer="1"/>
 <circle x="0.6" y="1.8" radius="0.08" width="0.127" layer="21"/>
 </package>
+<package name="HDC2010">
+<wire x1="-0.75" y1="-0.75" x2="0.7" y2="-0.75" width="0.127" layer="21"/>
+<wire x1="0.75" y1="-0.75" x2="0.75" y2="0.75" width="0.127" layer="21"/>
+<wire x1="0.75" y1="0.75" x2="-0.75" y2="0.75" width="0.127" layer="21"/>
+<wire x1="-0.75" y1="0.75" x2="-0.75" y2="-0.75" width="0.127" layer="21"/>
+<smd name="P$1" x="-0.5" y="0.5" dx="0.333" dy="0.333" layer="1" roundness="100"/>
+<smd name="P$2" x="-0.5" y="0" dx="0.333" dy="0.333" layer="1" roundness="100"/>
+<smd name="P$3" x="-0.5" y="-0.5" dx="0.333" dy="0.333" layer="1" roundness="100"/>
+<smd name="P$4" x="0.5" y="-0.5" dx="0.333" dy="0.333" layer="1" roundness="100" rot="R180"/>
+<smd name="P$5" x="0.5" y="0" dx="0.333" dy="0.333" layer="1" roundness="100" rot="R180"/>
+<smd name="P$6" x="0.5" y="0.5" dx="0.333" dy="0.333" layer="1" roundness="100" rot="R180"/>
+</package>
 </packages>
 <symbols>
 <symbol name="CRYSTAL_OSCILLATOR">
@@ -1610,6 +1622,18 @@ This is the "EZ" version, which has limited top masking for improved ease of ass
 <pin name="VIN" x="30.48" y="7.62" length="middle" rot="R180"/>
 <pin name="VOUT" x="30.48" y="17.78" length="middle" rot="R180"/>
 <pin name="DGND" x="12.7" y="10.16" visible="pad" length="middle" rot="R90"/>
+</symbol>
+<symbol name="HDC2010">
+<wire x1="0" y1="0" x2="15.24" y2="0" width="0.254" layer="94"/>
+<wire x1="15.24" y1="0" x2="15.24" y2="10.16" width="0.254" layer="94"/>
+<wire x1="15.24" y1="10.16" x2="0" y2="10.16" width="0.254" layer="94"/>
+<wire x1="0" y1="10.16" x2="0" y2="0" width="0.254" layer="94"/>
+<pin name="VCC" x="-5.08" y="7.62" length="middle"/>
+<pin name="ADD" x="-5.08" y="5.08" length="middle"/>
+<pin name="GND" x="-5.08" y="2.54" length="middle"/>
+<pin name="INT" x="20.32" y="2.54" length="middle" rot="R180"/>
+<pin name="SCL" x="20.32" y="5.08" length="middle" rot="R180"/>
+<pin name="SDA" x="20.32" y="7.62" length="middle" rot="R180"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -2542,6 +2566,26 @@ This is the "EZ" version, which has limited top masking for improved ease of ass
 <connect gate="G$1" pin="SW" pad="P$4"/>
 <connect gate="G$1" pin="VIN" pad="P$5"/>
 <connect gate="G$1" pin="VOUT" pad="P$7"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="HDC2010">
+<gates>
+<gate name="G$1" symbol="HDC2010" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="HDC2010">
+<connects>
+<connect gate="G$1" pin="ADD" pad="P$2"/>
+<connect gate="G$1" pin="GND" pad="P$3"/>
+<connect gate="G$1" pin="INT" pad="P$4"/>
+<connect gate="G$1" pin="SCL" pad="P$5"/>
+<connect gate="G$1" pin="SDA" pad="P$6"/>
+<connect gate="G$1" pin="VCC" pad="P$1"/>
 </connects>
 <technologies>
 <technology name=""/>
